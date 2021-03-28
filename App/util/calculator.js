@@ -36,7 +36,7 @@ export const handleEqual = state => {
 
   if (operator === "*") {
     return {
-      memorie: `${current} ${operator} ${previousValue} = ${previous / current}`,
+      memorie: `${current} ${operator} ${previousValue} = ${previous * current}`,
       currentValue: previous * current,
       ...resetState
     };
@@ -44,7 +44,7 @@ export const handleEqual = state => {
 
   if (operator === "+") {
     return {
-      memorie: `${current} ${operator} ${previousValue} = ${previous / current}`,
+      memorie: `${current} ${operator} ${previousValue} = ${previous + current}`,
       currentValue: previous + current,
       ...resetState
     };
@@ -52,7 +52,7 @@ export const handleEqual = state => {
 
   if (operator === "-") {
     return {
-      memorie: `${current} ${operator} ${previousValue} = ${previous / current}`,
+      memorie: `${current} ${operator} ${previousValue} = ${previous - current}`,
       currentValue: previous - current,
       ...resetState
     };
@@ -60,7 +60,7 @@ export const handleEqual = state => {
 
   if (operator === "^") {
     return {
-      memorie: `${current} ${operator} ${previousValue} = ${previous / current}`,
+      memorie: `${current} ${operator} ${previousValue} = ${Math.pow(previous, current)}`,
       currentValue: Math.pow(previous, current),
       ...resetState
     };

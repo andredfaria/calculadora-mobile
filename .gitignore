@@ -7,4 +7,3 @@ npm-debug.*
 *.mobileprovision
 *.lock
 *package-lock.json
-README.md
