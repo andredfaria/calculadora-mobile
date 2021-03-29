@@ -16,7 +16,6 @@ export const handleNumber = (value, state) => {
 };
 
 export const handleEqual = state => {
-  console.log(state);
   const { currentValue, previousValue, operator, memorie } = state;
 
   const current = parseFloat(currentValue);
@@ -77,13 +76,13 @@ const calculator = (type, value, state) => {
       return {
         operator: value,
         previousValue: state.currentValue,
-        currentValue: "0"
+        currentValue: "0",
       };
     case "equal":
       return handleEqual(state);
     case "clear":
       return initialState;
-    case "percentage":
+    case "negative":
       return {
         currentValue: `${parseFloat(state.currentValue) * -1}`
       };
@@ -93,14 +92,17 @@ const calculator = (type, value, state) => {
       };
     case "sqrt":
       return {
+        memorie: `√${state.currentValue} = ${Math.sqrt(parseFloat(state.currentValue))}`,
         currentValue: `${Math.sqrt(parseFloat(state.currentValue))}`
       };
     case "log":
       return {
+        memorie: `log${state.currentValue} = ${Math.log(parseFloat(state.currentValue))}`,
         currentValue: `${Math.log(parseFloat(state.currentValue))}`
       };
     case "potencia":
       return {
+        memorie: `${state.currentValue} ^ 2  = ${Math.pow(parseFloat(state.currentValue), 2)}`,
         currentValue: `${Math.pow(parseFloat(state.currentValue), 2)}`
       };
     default:

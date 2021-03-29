@@ -54,7 +54,7 @@ export default class App extends React.Component {
             <Button
               text="+/-"
               theme="secondary"
-              onPress={() => this.handleTap("percentage")}
+              onPress={() => this.handleTap("negative")}
             />
             <Button
               text="%"
