@@ -18,3 +18,9 @@ or
 `npm run android`
 
 ---
+
+### Application
+
+download APK app
+
+`https://expo.io/artifacts/3e84897f-a31e-49da-8d96-3ca595778712`

@@ -13,7 +13,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#e5e5e5"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,7 +22,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.calculadora"
+    },
+    "android": {
+      "package": "com.calculadora"
     }
   }
 }
